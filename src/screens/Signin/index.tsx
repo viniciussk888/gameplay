@@ -1,30 +1,43 @@
 import React from "react";
-import { View, Image, Text } from "react-native";
-import styles from "./styles";
+import { View, Text, Image, Alert, ActivityIndicator } from "react-native";
 
-import IllustrarionImg from "../../assets/illustration.png";
+import IllustrationImg from "../../assets/illustration.png";
+import { theme } from "../../global/styles/theme";
+import { styles } from "./styles";
 
-export const Signin: React.FC = () => {
+import { ButtonIcon } from "../../components/ButtonIcon";
+import { Background } from "../../components/Background";
+
+export function SignIn() {
+  const loading = false;
+
   return (
-    <View style={styles.container}>
-      <Image
-        style={styles.image}
-        resizeMode="stretch"
-        source={IllustrarionImg}
-      />
+    <Background>
+      <View style={styles.container}>
+        <Image
+          source={IllustrationImg}
+          style={styles.image}
+          resizeMode="stretch"
+        />
 
-      <View style={styles.content}>
-        <Text style={styles.title}>
-          Organize{"\n"}
-          suas jogatinas{"\n"}
-          facilmente
-        </Text>
+        <View style={styles.content}>
+          <Text style={styles.title}>
+            Conecte-se {"\n"}e organize suas {"\n"}
+            jogatinas
+          </Text>
 
-        <Text style={styles.subTitle}>
-          Crie grupos para jogar seus games {"\n"}
-          favoritos com seus amigos
-        </Text>
+          <Text style={styles.subtitle}>
+            Crie grupos para jogar seus games {"\n"}
+            favoritos com seus amigos
+          </Text>
+
+          {loading ? (
+            <ActivityIndicator color={theme.colors.primary} />
+          ) : (
+            <ButtonIcon title="Entrar com Discord" />
+          )}
+        </View>
       </View>
-    </View>
+    </Background>
   );
-};
+}
