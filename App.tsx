@@ -5,7 +5,7 @@ import {
   Rajdhani_500Medium,
   Rajdhani_700Bold,
 } from "@expo-google-fonts/rajdhani";
-import { SignIn } from "./src/screens/Signin";
+import { SignIn } from "./src/screens/SignIn";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
