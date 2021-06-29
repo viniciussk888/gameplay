@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, Image, Alert, ActivityIndicator } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+
 import IllustrationImg from "../../assets/illustration.png";
 import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
@@ -10,6 +12,12 @@ import { Background } from "../../components/Background";
 
 export function SignIn() {
   const loading = false;
+
+  const navigation = useNavigation();
+
+  function handleSignIn() {
+    navigation.navigate("Home");
+  }
 
   return (
     <Background>
@@ -34,7 +42,7 @@ export function SignIn() {
           {loading ? (
             <ActivityIndicator color={theme.colors.primary} />
           ) : (
-            <ButtonIcon title="Entrar com Discord" />
+            <ButtonIcon onPress={handleSignIn} title="Entrar com Discord" />
           )}
         </View>
       </View>
