@@ -1,21 +1,16 @@
-import React from 'react';
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React from "react";
+import { View, Text } from "react-native";
 
-import { styles } from './styles';
-import { theme } from '../../global/styles/theme';
+import { RectButton, RectButtonProps } from "react-native-gesture-handler";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export function ButtonAdd({...rest}: RectButtonProps) {
+import { styles } from "./styles";
+import { theme } from "../../global/styles/theme";
+
+export function ButtonAdd({ ...props }: RectButtonProps) {
   return (
-    <RectButton 
-      style={styles.container}
-      {...rest}
-    >
-      <MaterialCommunityIcons 
-        name="plus"
-        color={theme.colors.heading}
-        size={24}
-      />
+    <RectButton style={styles.container} {...props}>
+      <MaterialCommunityIcons name="plus" color={theme.colors.heading} size={24} />
     </RectButton>
-  )
+  );
 }

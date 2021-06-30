@@ -8,14 +8,12 @@ import { styles } from "./styles";
 type Props = RectButtonProps & {
   title: string;
 };
-
-export function ButtonIcon({ title, ...rest }: Props) {
+export function ButtonIcon({ title, ...props }: Props) {
   return (
-    <RectButton style={styles.container} {...rest}>
+    <RectButton style={styles.container} {...props}>
       <View style={styles.iconWrapper}>
         <Image source={DiscordImg} style={styles.icon} />
       </View>
-
       <Text style={styles.title}>{title}</Text>
     </RectButton>
   );

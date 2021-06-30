@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0D133E"
+      "backgroundColor": "#0D133D"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Projeto criado durante NLW Together da RocketSeat. Tem como objetivo integração com discord e agendamento de partidas entre amigos.\n\n",
+    "githubUrl": "https://github.com/victoralmeidadev/gameplay-nlw-together"
   }
 }

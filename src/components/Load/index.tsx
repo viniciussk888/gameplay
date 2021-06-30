@@ -1,20 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import {
-  View,
-  ActivityIndicator
-} from 'react-native';
+import { View, ActivityIndicator } from "react-native";
 
-import { styles } from './styles';
-import { theme } from '../../global/styles/theme';
+import { theme } from "../../global/styles/theme";
 
-export function Load(){
+import { styles } from "./styles";
+
+export function Load() {
   return (
     <View style={styles.container}>
-      <ActivityIndicator 
-        size="large"
-        color={theme.colors.primary}
-      />
+      <ActivityIndicator size="large" color={theme.colors.primary} />
     </View>
   );
 }
